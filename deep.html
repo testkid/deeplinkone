@@ -2,13 +2,23 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+
     <title>Deep Link Demo Page</title>
   </head>
   <body>
     <h2>Deep link demo page</h2>
     <br/>
     <div>
-      <a href="deeplinkdemo://localhost/deeplink">Tap to open deeplink.</a>
+      <!-- <a href="deeplinkdemo://testkid.github.io/deeplink">Tap to open deeplink.</a> -->
+      <a onclick="openDeepLink">Tap to open deeplink.</a>
     </div>
+    <script type="text/javascript">
+      function openDeepLink() {
+        setTimeout(function () {
+          window.location = "https://testkid.github.io/deeplinkone/error.html";
+        }, 25);
+        window.location = "deeplinkdemo://testkid.github.io/deeplink";
+      }
+    </script>
   </body>
 </html>
